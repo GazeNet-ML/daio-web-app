@@ -1,0 +1,7 @@
+fastapi
+pandas
+tensorflow
+numpy
+pickle5
+shutil
+uvicorn
