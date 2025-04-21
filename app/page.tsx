@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Upload, FileText } from "lucide-react";
-import { CheckCircle } from "lucide-react"; // or from react-icons if you're using that
+import { CheckCircle } from "lucide-react"; 
 
 
 export default function UploadVideo() {
@@ -44,24 +44,7 @@ export default function UploadVideo() {
         }
         setLoading(false);
     };
-
-    const renderProbabilityBar = (probabilities, labels) => {
-        return probabilities.map((prob, index) => (
-            <div key={index} className="flex items-center mb-2">
-                <span className="w-40 mr-2">{labels[index]}</span>
-                <div 
-                    className="h-5 text-right px-1 text-black" 
-                    style={{
-                        width: `${prob * 100}%`, 
-                        backgroundColor: `rgba(33, 150, 243, ${prob})`
-                    }}
-                >
-                    {(prob * 100).toFixed(2)}%
-                </div>
-            </div>
-        ));
-    };
-
+    
     return (
         
         <div className="min-h-screen bg-gray-100 px-4 py-4">
@@ -121,7 +104,7 @@ export default function UploadVideo() {
     </>
   ) : modelOutput ? (
     <>
-      {/* Analysis Complete Card goes here */}
+      {/* Analysis Completion*/}
       <h2 className="text-xl font-semibold mb-6 text-gray-800">Classification Results</h2>
 
       <div className="flex justify-center mb-4">
@@ -149,9 +132,6 @@ export default function UploadVideo() {
         </div>
         <div className="border border-t-0 rounded-b-md px-4 py-4 text-center">
           <p className="text-xl font-semibold text-gray-800">{modelOutput.attention.class}</p>
-          <p className="text-sm text-gray-600 mt-1">
-            Bad visuo-perceptual skills, Good task switching skills
-          </p>
         </div>
       </div>
 
